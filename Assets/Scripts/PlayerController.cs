@@ -5,20 +5,40 @@ public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float speed;
+    public float speed = 3;
     public Rigidbody2D rb;
+    public Animator animator;
+
+    private bool facingRight;
 
     Vector2 movement;
     void Start()
     {
-       this.speed = 3f; 
+
     }
 
+    void GetSpeed() {
+        movement.x = Input.GetAxisRaw("Horizontal") * speed;
+        movement.y = Input.GetAxisRaw("Vertical") * speed;
+
+        if (movement.x >= 0) facingRight = true; else facingRight = false;
+
+        if (facingRight) {
+            animator.SetFloat("Horizontal", 1f);
+        } else {
+            animator.SetFloat("Horizontal", -1.1f);
+        }
+        animator.SetFloat("Speed", movement.sqrMagnitude);
+    }
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal") * speed;
-        movement.y = Input.GetAxisRaw("Vertical") * speed;
+        this.GetSpeed();
+
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            animator.ResetTrigger("Attack");
+            animator.SetTrigger("Attack");
+        }
     }
 
     void FixedUpdate() {

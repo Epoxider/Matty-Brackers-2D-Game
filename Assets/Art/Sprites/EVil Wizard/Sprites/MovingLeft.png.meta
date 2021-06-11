@@ -1,36 +1,36 @@
 fileFormatVersion: 2
-guid: 1d1b8c13117254e41bf37a4dafb0404f
+guid: c1124a82e8d814347a043f6f909b5bdf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3743957659742367504
-    second: Move_0
+      213: -5956456867512086913
+    second: movingLeft_0
   - first:
-      213: 8405476814967859603
-    second: Move_1
+      213: 253429951060768509
+    second: movingLeft_1
   - first:
-      213: -5086530901905536447
-    second: Move_2
+      213: -1282689156330584284
+    second: movingLeft_2
   - first:
-      213: 1521079245874940812
-    second: Move_3
+      213: 2500285536813155207
+    second: movingLeft_3
   - first:
-      213: 4010896587680814743
-    second: Move_4
+      213: 7259207800997177053
+    second: movingLeft_4
   - first:
-      213: 8831429847189535439
-    second: Move_5
+      213: 3800568346420322742
+    second: movingLeft_5
   - first:
-      213: 2035570627030528938
-    second: Move_6
+      213: 7222287249634155187
+    second: movingLeft_6
   - first:
-      213: 2303739067743378419
-    second: Move_7
+      213: 1125122093871410112
+    second: movingLeft_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -56,7 +56,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -85,7 +85,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -112,30 +112,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Lumin
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -151,118 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Move_0
+      name: movingLeft_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 49
-        width: 48
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01feb0bb7a535f330800000000000000
-      internalID: 3743957659742367504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Move_1
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 49
-        width: 48
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 399e0fb01a046a470800000000000000
-      internalID: 8405476814967859603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Move_2
-      rect:
-        serializedVersion: 2
-        x: 349
-        y: 49
-        width: 49
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14a8fd428130969b0800000000000000
-      internalID: -5086530901905536447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Move_3
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 49
-        width: 48
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c8b489dd385fb1510800000000000000
-      internalID: 1521079245874940812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Move_4
-      rect:
-        serializedVersion: 2
-        x: 650
-        y: 49
-        width: 48
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7969a83223199a730800000000000000
-      internalID: 4010896587680814743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Move_5
-      rect:
-        serializedVersion: 2
-        x: 796
+        x: 52
         y: 49
         width: 52
-        height: 66
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,17 +141,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcab384b7aa8f8a70800000000000000
-      internalID: 8831429847189535439
+      spriteID: f7e8104a90a665da0800000000000000
+      internalID: -5956456867512086913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Move_6
+      name: movingLeft_1
       rect:
         serializedVersion: 2
-        x: 946
+        x: 202
         y: 49
         width: 52
         height: 68
@@ -291,19 +162,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa3bf5b43bccf3c10800000000000000
-      internalID: 2035570627030528938
+      spriteID: df6fb60a23d548300800000000000000
+      internalID: 253429951060768509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Move_7
+      name: movingLeft_2
       rect:
         serializedVersion: 2
-        x: 1096
+        x: 352
         y: 49
         width: 52
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4278baf1209f23ee0800000000000000
+      internalID: -1282689156330584284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: movingLeft_3
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 49
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7838bcad27cc2b220800000000000000
+      internalID: 2500285536813155207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: movingLeft_4
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 49
+        width: 48
         height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -312,8 +225,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fb9804f97688ff10800000000000000
-      internalID: 2303739067743378419
+      spriteID: dd66e29b803edb460800000000000000
+      internalID: 7259207800997177053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: movingLeft_5
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 49
+        width: 49
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b12af856c45eb430800000000000000
+      internalID: 3800568346420322742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: movingLeft_6
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 49
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bad64cfcf7ba3460800000000000000
+      internalID: 7222287249634155187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: movingLeft_7
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 49
+        width: 48
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb262e459c3d9f00800000000000000
+      internalID: 1125122093871410112
       vertices: []
       indices: 
       edges: []
