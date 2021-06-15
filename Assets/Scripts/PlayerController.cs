@@ -19,8 +19,25 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    float AngleBetweenTwoPoints(Vector3 a, Vector3 b) {
+        return Mathf.Atan2(a.y-b.y, a.x-b.y) * Mathf.Rad2Deg; 
+    }
     void Shoot() {
-        Instantiate(Magebolt, this.transform.position, this.transform.rotation);
+        Vector2 mPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = mPos - (Vector2)transform.position;
+        direction.Normalize();
+        GameObject mageBolt = Instantiate(Magebolt, transform.position, Quaternion.identity); 
+        mageBolt.GetComponent<MageBoltController>().velocity = direction;
+
+        //rotaton
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 5.23f;
+        Vector3 objectPos = Camera.main.WorldToScreenPoint (transform.position);
+        mousePos.x = mousePos.x - objectPos.x;
+        mousePos.y = mousePos.y - objectPos.y;
+        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        mageBolt.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
     }
 
     void GetSpeed() {
@@ -41,12 +58,9 @@ public class PlayerController : MonoBehaviour
     {
         this.GetSpeed();
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetMouseButtonDown(0)) {
             animator.ResetTrigger("Attack");
             animator.SetTrigger("Attack");
-        }
-
-        if (Input.GetKeyDown(KeyCode.K)) {
             Shoot();
         }
     }
