@@ -9,12 +9,18 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
+    public GameObject Magebolt;
+
     private bool facingRight;
 
     Vector2 movement;
     void Start()
     {
 
+    }
+
+    void Shoot() {
+        Instantiate(Magebolt, this.transform.position, this.transform.rotation);
     }
 
     void GetSpeed() {
@@ -38,6 +44,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) {
             animator.ResetTrigger("Attack");
             animator.SetTrigger("Attack");
+        }
+
+        if (Input.GetKeyDown(KeyCode.K)) {
+            Shoot();
         }
     }
 

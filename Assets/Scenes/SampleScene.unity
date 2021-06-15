@@ -5835,8 +5835,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3371328016363393124, guid: 837855af5452967488c368581ffe3d1d, type: 3}
+      propertyPath: Magebolt
+      value: 
+      objectReference: {fileID: 8380280934785969199, guid: 4f670e73635f92a40837d5a05c45bba7, type: 3}
     - target: {fileID: 3371328016363393125, guid: 837855af5452967488c368581ffe3d1d, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3371328016363393125, guid: 837855af5452967488c368581ffe3d1d, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
