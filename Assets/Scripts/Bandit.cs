@@ -89,7 +89,6 @@ public class Bandit : MonoBehaviour {
         //Combat Idle
         else if (m_combatIdle)
             m_animator.SetInteger("AnimState", 1);
-
         //Idle
         else
             m_animator.SetInteger("AnimState", 0);
