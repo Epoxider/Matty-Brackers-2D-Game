@@ -9,7 +9,7 @@ public class MageBoltController : MonoBehaviour
     private float destroyTime = 2;
     public Vector3 velocity;
     public float speed;
-    private int dam = 100;
+    private int dam = 10;
     void Start()
     {
         //transform.LookAt(transform.position + velocity);

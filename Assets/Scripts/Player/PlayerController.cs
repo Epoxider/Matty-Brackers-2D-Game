@@ -8,9 +8,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 3;
     public Rigidbody2D rb;
     public Animator animator;
-
     public GameObject Magebolt;
-
+    public GameObject Killbolt;
     private bool facingRight;
 
     Vector2 movement;
@@ -46,7 +45,7 @@ public class PlayerController : MonoBehaviour
         Vector2 mPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = mPos - (Vector2)transform.position;
         direction.Normalize();
-        GameObject mageBolt = Instantiate(Magebolt, transform.position, Quaternion.identity); 
+        GameObject mageBolt = Instantiate(Killbolt, transform.position, Quaternion.identity); 
         mageBolt.GetComponent<MageBoltController>().velocity = direction;
 
         //rotaton
@@ -83,13 +82,18 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("Attack");
             ShootMageBolt();
         }
-
-        if (Input.GetKeyDown(KeyCode.I)) {
+        if (Input.GetMouseButtonDown(1)) {
             animator.ResetTrigger("Attack");
             animator.SetTrigger("Attack");
+            ShootKillBolt();
+        }
+        if (Input.GetKeyDown(KeyCode.Tab)) {
+            animator.ResetTrigger("Attack");
+            animator.SetTrigger("Attack");
+            ShootKillBolt();
             ShootMageBolt();
         }
-        if (Input.GetMouseButtonDown(1)) {
+        if (Input.GetKeyDown(KeyCode.Space)) {
             Teleport();
         }
     }
