@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3239541606845601319, guid: 4f670e73635f92a40837d5a05c45bba7, type: 3}
+      propertyPath: speed
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 734052332892127396, guid: 4f670e73635f92a40837d5a05c45bba7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -55,6 +59,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 5cf070071288f47de93f37f2266c5a53, type: 3}
+    - target: {fileID: 6790905492921372564, guid: 4f670e73635f92a40837d5a05c45bba7, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.07
+      objectReference: {fileID: 0}
     - target: {fileID: 8380280934785969199, guid: 4f670e73635f92a40837d5a05c45bba7, type: 3}
       propertyPath: m_Name
       value: KillBolt
