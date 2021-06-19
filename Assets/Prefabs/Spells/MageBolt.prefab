@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6979184854810736442}
   - component: {fileID: 6790905492921372564}
   - component: {fileID: -3239541606845601319}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MageBolt
   m_TagString: Spell
   m_Icon: {fileID: 0}

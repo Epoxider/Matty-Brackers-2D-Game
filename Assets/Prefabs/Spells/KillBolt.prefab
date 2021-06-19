@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: KillBolt
       objectReference: {fileID: 0}
+    - target: {fileID: 8380280934785969199, guid: 4f670e73635f92a40837d5a05c45bba7, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8809263757102501897, guid: 4f670e73635f92a40837d5a05c45bba7, type: 3}
       propertyPath: m_Controller
       value: 
