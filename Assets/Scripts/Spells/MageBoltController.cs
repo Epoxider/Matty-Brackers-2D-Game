@@ -17,10 +17,11 @@ public class MageBoltController : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D hitInfo) {
-
         if (hitInfo.gameObject.tag=="Enemy") {
+            if(hitInfo.gameObject.GetComponent<EnemyController>() != null){ 
             hitInfo.gameObject.GetComponent<EnemyController>().TakeDamage(dam);
             Destroy(gameObject);
+            }
         }
     }
     // Update is called once per frame
