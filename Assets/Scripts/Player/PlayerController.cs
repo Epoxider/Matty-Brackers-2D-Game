@@ -11,11 +11,20 @@ public class PlayerController : MonoBehaviour
     public GameObject Magebolt;
     public GameObject Killbolt;
     private bool facingRight;
+    public int maxHealth = 100;
+    public int currentHealth;
+    public HealthBar healthBar;
 
     Vector2 movement;
     void Start()
     {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
 
+    void TakeDam(int dam) {
+        currentHealth -= dam;
+        healthBar.SetHealth(currentHealth);
     }
 
     void Teleport() {
@@ -95,6 +104,10 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space)) {
             Teleport();
+        }
+
+        if (Input.GetKeyDown(KeyCode.P)) {
+            TakeDam(20);
         }
     }
 
