@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
+    private Inventory inventory;
+    public GameObject Ui_inventory;
+    
+
     Vector2 movement;
     void Start()
     {
@@ -140,6 +144,14 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P)) {
             TakeDam(20);
+        }
+
+        if(Input.GetKeyDown(KeyCode.C)) {
+            if(Ui_inventory.activeSelf == false){
+                Ui_inventory.SetActive(true);
+            }else{
+                Ui_inventory.SetActive(false);
+            }
         }
     }
 
