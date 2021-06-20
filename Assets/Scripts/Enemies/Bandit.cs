@@ -34,9 +34,6 @@ public class Bandit : MonoBehaviour {
         // Move
         m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
 
-        //Set AirSpeed in animator
-        m_animator.SetFloat("AirSpeed", m_body2d.velocity.y);
-
         // -- Handle Animations --
         //Death
         if (Input.GetKeyDown("e")) {
@@ -76,8 +73,5 @@ public class Bandit : MonoBehaviour {
         //Combat Idle
         else if (m_combatIdle)
             m_animator.SetInteger("AnimState", 1);
-        //Idle
-        else
-            m_animator.SetInteger("AnimState", 0);
     }
 }
