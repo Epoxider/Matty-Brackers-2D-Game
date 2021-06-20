@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameObject Boltbolt;
     public HealthBar healthBar;
     public ComboPointController comboPoint;
+    public SpriteRenderer spriteR;
 
 
     //Player values
@@ -22,7 +23,6 @@ public class PlayerController : MonoBehaviour
     public int currentHealth;
 
     private Inventory inventory;
-    public GameObject Ui_inventory;
     
 
     Vector2 movement;
@@ -84,8 +84,9 @@ public class PlayerController : MonoBehaviour
         Vector2 mPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = mPos - (Vector2)transform.position;
         direction.Normalize();
-        GameObject boltBolt = Instantiate(Boltbolt, transform.position, Quaternion.identity); 
-        boltBolt.GetComponent<KillBoltController>().velocity = direction;
+        GameObject boltBolt = Instantiate(Boltbolt, mPos, Quaternion.identity); 
+        boltBolt.GetComponent<KillBoltController>().velocity = -direction;
+        boltBolt.GetComponent<SpriteRenderer>().flipX = true;
 
         //rotaton
         Vector3 mousePos = Input.mousePosition;
@@ -146,13 +147,14 @@ public class PlayerController : MonoBehaviour
             TakeDam(20);
         }
 
-        if(Input.GetKeyDown(KeyCode.C)) {
+        /*if(Input.GetKeyDown(KeyCode.C)) {
             if(Ui_inventory.activeSelf == false){
                 Ui_inventory.SetActive(true);
             }else{
                 Ui_inventory.SetActive(false);
             }
         }
+        */
     }
 
     void FixedUpdate() {

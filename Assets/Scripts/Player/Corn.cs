@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class Corn : MonoBehaviour
 {
-    // Start is called before the first frame update
-
+    void OnCollisionEnter2D(Collision2D hitInfo) {
+        if (hitInfo.gameObject.tag=="Player") {
+            hitInfo.gameObject.GetComponent<Inventory>().AddItem(gameObject);
+            Destroy(gameObject);
+        }
+    }  
 }

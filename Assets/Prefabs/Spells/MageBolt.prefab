@@ -156,4 +156,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 6979184854810736442}
   velocity: {x: 0, y: 0, z: 0}
-  speed: 20
+  speed: 10

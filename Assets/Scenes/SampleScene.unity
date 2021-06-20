@@ -20430,6 +20430,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3048694234790716060, guid: 3bcd1a7d615e0ce46b87d8f7ac335848, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4702948017610708637, guid: 3bcd1a7d615e0ce46b87d8f7ac335848, type: 3}
       propertyPath: m_Name
       value: Corn
@@ -21495,6 +21499,10 @@ PrefabInstance:
       propertyPath: speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3371328016363393124, guid: 837855af5452967488c368581ffe3d1d, type: 3}
+      propertyPath: Boltbolt
+      value: 
+      objectReference: {fileID: 5760604911737417826, guid: 51c28fdbbe5ca95c38d27137baff69e3, type: 3}
     - target: {fileID: 3371328016363393124, guid: 837855af5452967488c368581ffe3d1d, type: 3}
       propertyPath: Killbolt
       value: 
@@ -24073,6 +24081,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e194f2f9d6ab84a9b64ebf1d6568d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1650028052
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650028047}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 7
 --- !u!224 &1675047146 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5806590788829380352, guid: 81fd28cbfbac4854cbd1e70c50f606f4, type: 3}
