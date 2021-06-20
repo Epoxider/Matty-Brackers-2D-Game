@@ -5,15 +5,20 @@ public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float speed = 3;
+    //Game Objects
     public Rigidbody2D rb;
     public Animator animator;
     public GameObject Magebolt;
     public GameObject Killbolt;
+    public HealthBar healthBar;
+    public ComboPointController comboPoint;
+
+
+    //Player values
+    public float speed = 3;
     private bool facingRight;
     public int maxHealth = 100;
     public int currentHealth;
-    public HealthBar healthBar;
 
     Vector2 movement;
     void Start()
@@ -34,28 +39,30 @@ public class PlayerController : MonoBehaviour
         transform.position = transform.position + (Vector3) direction*7;
     }
     void ShootMageBolt() {
-        Vector2 mPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = mPos - (Vector2)transform.position;
-        direction.Normalize();
-        GameObject mageBolt = Instantiate(Magebolt, transform.position, Quaternion.identity); 
-        mageBolt.GetComponent<MageBoltController>().velocity = direction;
+        if (comboPoint.GetComboPoints() == 3) { 
+            Vector2 mPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 direction = mPos - (Vector2)transform.position;
+            direction.Normalize();
+            GameObject mageBolt = Instantiate(Magebolt, transform.position, Quaternion.identity); 
+            mageBolt.GetComponent<MageBoltController>().velocity = direction;
 
-        //rotaton
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 5.23f;
-        Vector3 objectPos = Camera.main.WorldToScreenPoint (transform.position);
-        mousePos.x = mousePos.x - objectPos.x;
-        mousePos.y = mousePos.y - objectPos.y;
-        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        mageBolt.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-
+            //rotaton
+            Vector3 mousePos = Input.mousePosition;
+            mousePos.z = 5.23f;
+            Vector3 objectPos = Camera.main.WorldToScreenPoint (transform.position);
+            mousePos.x = mousePos.x - objectPos.x;
+            mousePos.y = mousePos.y - objectPos.y;
+            float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+            mageBolt.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            comboPoint.SetComboPoints(0);
+        }
     }
     void ShootKillBolt() {
         Vector2 mPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = mPos - (Vector2)transform.position;
         direction.Normalize();
-        GameObject mageBolt = Instantiate(Killbolt, transform.position, Quaternion.identity); 
-        mageBolt.GetComponent<MageBoltController>().velocity = direction;
+        GameObject killBolt = Instantiate(Killbolt, transform.position, Quaternion.identity); 
+        killBolt.GetComponent<KillBoltController>().velocity = direction;
 
         //rotaton
         Vector3 mousePos = Input.mousePosition;
@@ -64,8 +71,9 @@ public class PlayerController : MonoBehaviour
         mousePos.x = mousePos.x - objectPos.x;
         mousePos.y = mousePos.y - objectPos.y;
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        mageBolt.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        killBolt.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
+        comboPoint.AddComboPoints(1);
     }
 
     void GetSpeed() {
