@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
 
     //Player values
-    public float speed = 3;
+    public float speed = 20;
     private bool facingRight;
     public int maxHealth = 100;
     public int currentHealth;
@@ -138,30 +138,24 @@ public class PlayerController : MonoBehaviour
     {
         GetSpeed();
 
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            animator.ResetTrigger("Attack");
-            animator.SetTrigger("Attack");
-            ShootMageBolt();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2)) {
+        if (Input.GetMouseButtonDown(0)) {
             animator.ResetTrigger("ShortAttack");
             animator.SetTrigger("ShortAttack");
             ShootKillBolt();
-        }if (Input.GetKeyDown(KeyCode.Alpha3)) {
+        }if (Input.GetMouseButtonDown(1)) {
             animator.ResetTrigger("ShortAttack");
             animator.SetTrigger("ShortAttack");
             ShootBoltBolt();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4)) {
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            animator.ResetTrigger("ShortAttack");
+            animator.SetTrigger("ShortAttack");
+            ShootMageBolt();
+        }
+        if (Input.GetKeyDown(KeyCode.R)) {
             animator.ResetTrigger("Attack");
             animator.SetTrigger("Attack");
             Invoke("ShootOrbiter", 2f);
-        }
-        if (Input.GetKeyDown(KeyCode.Tab)) {
-            animator.ResetTrigger("Attack");
-            animator.SetTrigger("Attack");
-            ShootKillBolt();
-            ShootMageBolt();
         }
         if (Input.GetKeyDown(KeyCode.Space)) {
             Teleport();
