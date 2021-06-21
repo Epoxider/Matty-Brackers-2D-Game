@@ -7,7 +7,6 @@ public class Corn : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D hitInfo) {
         if (hitInfo.gameObject.tag=="Player") {
-            hitInfo.gameObject.GetComponent<Inventory>().AddItem(gameObject);
             Destroy(gameObject);
         }
     }  
